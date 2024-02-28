@@ -19,18 +19,29 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{paracol}    % multicolumn layout
 \usepackage{fancyhdr}   % footer
-\usepackage[left=0.75in,top=0.5in,right=0.75in,bottom=0.75in,columnsep=0.5in]{geometry}
+\usepackage[left=0.5in,top=0.5in,right=0.5in,bottom=0.5in,columnsep=0.5in]{geometry}
 
 % define tab spacing
+\usepackage{setspace}
 \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
 
 % custom link underlining
 \usepackage{contour}
 \usepackage{ulem}
-\renewcommand{\ULdepth}{3.8pt}
+\renewcommand{\ULdepth}{1.8pt}
 \contourlength{0.8pt}
 \newcommand{\myuline}[1]{\uline{\phantom{#1}}\llap{\contour{white}{#1}}}
+
+\usepackage{siunitx}
+\sisetup{detect-all=true}   % ensure proper font weight
+\sisetup{per-mode = repeated-symbol}    % ensure "/" unit delineator
+\sisetup{range-phrase = --,range-units = brackets} % hyphenated ranges, SI syntax
+\DeclareMathSymbol{\varOmega}{\mathalpha}{operators}{"0A}   % upright omega for ohms
+\providecommand*{\Ohm}{\varOmega}   % for siunitx
+\DeclareSIUnit\sq{\ensuremath{\Box}}    % sheet resistance
+\DeclareSIUnit{\Siemens}{S}
+\DeclareSIUnit{\torr}{Torr} % add torr to siunitix 3
 
 % setup page
 \begin{document}
@@ -39,26 +50,29 @@
 \renewcommand{\footrulewidth}{2pt}
 \fancyfoot[C]{github.com/c-biancone/resume}
 
-\SetPageColorSpace{PANTONE}
-\definecolor{deepblue}{spotcolor}{PANTONE19-3847TCX, 1.0}
+% \SetPageColorSpace{PANTONE}
+% \definecolor{deepblue}{spotcolor}{PANTONE19-3847TCX, 1.0}
 
 %-------------------------------------------------------------------
 %	HEADER
 %-------------------------------------------------------------------
-\parbox[b]{0.25 \textwidth}{\setstretch{0.75}\HUGE{\bold{Chris\\Biancone}}}
+\parbox[b]{0.25 \textwidth}{\linespread{0.75}\bold\HUGE Chris Biancone}
 \hfill
 \hspace{5pt}
-\parbox[b]{0.2 \textwidth}{\large{\bold{BS/MS Electrical \\ Engineering}}}
+\parbox[b]{0.2 \textwidth}{\Large{\bold{BS/MS Electrical \\ Engineering}}}
 \hfill
-\parbox[b]{0.25 \textwidth}{\sans\small\faPhone\thinspace (973) 896-0255 \\ \href{mailto:chris.biancone@gmail.com}{\faEnvelope\thinspace\myuline{chris.biancone@gmail.com}} \setstretch{1.25}
+\parbox[b]{0.26 \textwidth}{\RaggedRight\small\faPhone\thinspace (973) 896-0255 \href{mailto:chris.biancone@gmail.com}{\faEnvelope\thinspace\myuline{chris.biancone@gmail.com}} \setstretch{1.25}
 \href{https://www.linkedin.com/in/c-biancone/}{\faLinkedin\thinspace\myuline{c-biancone}} \href{https://github.com/c-biancone}{\faGithub\thinspace\myuline{c-biancone}}}
-\hspace{3pt}
+
+% \hspace{3pt}
+\vspace{-8pt}
 
 {\color{lightgray}\rule{\linewidth}{2pt}\par}
-\vspace{18pt}
+
+\vspace{-3pt}
 
 % resume body column structure
-\columnratio{0.325}
+\columnratio{0.33}
 \begin{paracol}{2}
 
 %-------------------------------------------------------------------
@@ -66,35 +80,40 @@
 %-------------------------------------------------------------------
 \cvsection{About}
 
-\bodyfont Fourth-year EE student at RIT; DoD SMART Scholar. I have background in the semiconductor, embedded systems, and defense industries, and extensive experience working on multidisciplinary teams.
+\RaggedRight
+Fifth-year EE student at RIT proficient in analog and mixed signal electronics design and instruction. Experienced CAD tools such as C\=adence, Altium, and MATLAB for microelectronics, control system, and SDR system design. Currently conducting research into biophysical effects of DC magnetic fields and semiconducting properties of neurons for publication in a graduate paper.
 
-I am black belt and have a passion for playing music, hiking, and designing for a sustainable future.
+I am an Isshin-Ryu black belt and enjoy hiking and mountain biking. I have recently combined a love of music with my knowledge in analog electronics design to design a low-tolerance differential RIAA preamplifier.
 
 %-------------------------------------------------------------------
 %	EDUCATION
 %-------------------------------------------------------------------
 \cvsection{Education}
-{\color{black}\Large\bold{Rochester Institute of Technology}}
+{\large\bold{Rochester Institute of \\ Technology}}
 
-{\color{black} GPA: 3.64} \hfill 2019 - Present \\
-\bodyfont BS/MS Electrical Engineering with \\
-focus in MEMS\\
-\divider
+{GPA: 3.7} \hfill 2019 -- Present \\
+BS/MS Electrical Engineering with \\
+MS focus in MEMS\\
 
-{\color{black}\Large\bold{Pope John XXIII HS}}
+% {\Large\bold{Pope John XXIII HS}}
 
-{\color{black} GPA: 4.26} \hfill 2015 - 2019 \\
-MIT Zero Robotics \\
-Captain FTC Robotics
+% {GPA: 4.26} \hfill 2015 - 2019 \\
+% MIT Zero Robotics \\
+% Captain FTC Robotics
 
 %-------------------------------------------------------------------
 %	SKILLS
 %-------------------------------------------------------------------
 \cvsection{Skills}
-\faLaptop \hspace{6pt} Altium; Quartus; SPICE; Mentor Graphics; Solidworks; AutoCAD; Excel \par
-\faCode \hspace{6pt} C(++); Python; MATLAB; Assembly; Java; \LaTeX{}; Bash \par
-\faWrench \hspace{6pt} Agile Development; Semiconductor Design; Additive Manufacturing; Scanning Electron Microscopy \par
-
+\begin{description}
+    \item[\faLaptop] \hspace{0.25em} C\=adence Virtuoso, Altium, COMSOL, SPICE, Solidworks
+\end{description}
+\begin{description}
+    \item[\faCode] \hspace{0.25em} C++, Python, MATLAB, \LaTeX{}
+\end{description}
+\begin{description}
+    \item[\faWrench] \hspace{0.25em} Analog / Mixed Signal Design, MEMS Fabrication \par
+\end{description}
 
 \switchcolumn   % goto right side
 
@@ -103,56 +122,64 @@ Captain FTC Robotics
 %-------------------------------------------------------------------
 \cvsection{Experience}
 
-\parbox[t]{0.25 \textwidth}{\Large{\bold{DEVCOM AC}} \par\smallskip
-\begingroup
-\setstretch{0.85}
-\normalsize\sans{Armored Vehicle Fire \\ Control Systems\\}
-\endgroup 
-\small\bodyfont{May 2021 -- Present \\ Picatinny Arsenal, NJ}
-}
-\hfill
-\parbox[t]{0.5 \linewidth}{\vspace{-11pt} Assist development of next-generation medium caliber gun control systems. Apply knowledge of real-time processing, control systems, and military design requirements. Support obsolescence mitigation for Abrams tanks.}
+\large{\bold{Control Systems Internship}} \hfill \small\bodyfont{Summers 2021 -- Pres.} \par\smallskip
+\vspace{-8pt}
+\small\thin{Armored Vehicle Fire Control} \hfill \small\thin{Picatinny Arsenal, NJ}
+\setstretch{0.9}
+
+\normalsize\rm Managed the re-engineering of an unmanned ground vehicle electrical system to include failure modes. Investigated the adaptation of existing hardware to an open Ethernet standard. Supported the development of next-generation fire control for medium caliber systems.
+
 \hspace{0pt}
-\vspace{-12pt}
+\vspace{-24pt}
 
 \divider
 
-\parbox[t]{0.25 \textwidth}{\Large{\bold{RIT / NSF}} \par\smallskip
-\begingroup
-\setstretch{0.85}
-\normalsize\sans{MEMS Device Research}
-\par\endgroup
-\bodyfont{January 2021 -- Present \\ Rochester, NY}
-}
-\hfill
-\parbox[t]{0.5 \linewidth}{\vspace{-11pt} Developed novel process flow for manufacturing sensor array of previously unattained sensitivity. Testing to improve current microfluidic models for pumpless cooling of electronics.}
+\large{\bold{Graduate Teaching Assistant}} \hfill \small\bodyfont{January 2023 -- Pres.} \par\smallskip
+\vspace{-8pt}
+\small\thin{Analog Electronics} \hfill \small\thin{RIT}
+\setstretch{0.9}
+
+\normalsize\rm Instructed and assisted students in RIT's EE480 Analog Electronics lab. Exercises include SPICE and hardware characterization and simulation of diode circuits, and blutistage BJT/MOSFET amplifiers.
+
 \hspace{0pt}
-\vspace{-12pt}
+\vspace{-24pt}
 
 \divider
 
-\parbox[t]{0.25 \textwidth}{\Large{\bold{RoNetco}} \par\smallskip
-\begingroup
-\setstretch{0.85}
-\normalsize\sans{Information and \\ Electronics Technologies}
-\par\endgroup
-\bodyfont{June 2019 -- September 2020 \\ Ledgewood, NJ}
-}
-\hfill
-\parbox[t]{0.5 \linewidth}{\vspace{-11pt} Designed and documented network room fire suppression system. Drafted AutoCAD drawings for construction. Improved efficiency by automating the transition from Windows 7 to 10.}
-\hspace{0pt}
-\medskip
+\large{\bold{Undergraduate Research}} \hfill \small\bodyfont{January 2021 -- Pres.} \par\smallskip
+\vspace{-8pt}
+\small\thin{Microfluidics MEMS} \hfill \small\thin{RIT \& NSF}
+\setstretch{0.9}
+
+\normalsize\rm Developed novel process flow for manufacturing piezoresistive \\diaphragm array with \qty{200}{\nm} thickness. Packaging and testing for use to improve current microfluidic models for pumpless cooling of electronics.
+
+% \hspace{0pt}
+% \vspace{-24pt}
+
+% \divider
+
+% \parbox[t]{0.25 \textwidth}{\Large{\bold{RoNetco}} \par\smallskip
+% \begingroup
+% \setstretch{0.85}
+% \normalsize{Information and \\ Electronics Technologies}
+% \par\endgroup
+% \bodyfont{June 2019 -- September 2020 \\ Ledgewood, NJ}
+% }
+% \hfill
+% \parbox[t]{0.5 \linewidth}{\vspace{-11pt} Designed and documented network room fire suppression system. Drafted AutoCAD drawings for construction. Improved efficiency by 90\% via automating the transition from Windows 7 to 10.}
+% \hspace{0pt}
+% \medskip
 
 %-------------------------------------------------------------------
 %	PROJECTS
 %-------------------------------------------------------------------
 \cvsection{Projects}
 
-\parbox[t]{0.25 \textwidth}{\Large{\bold{RISC CPU}}}
+\parbox[t]{0.25 \textwidth}{\large{\bold{RTR Fully-Differential \\Op-Amp}}}
 \hfill
 \parbox[t]{0.5 \linewidth}{\vspace{-11pt} Verilog Harvard architecture CPU implemented in hardware on Altera FPGA. Wrote Python assembler for full development stack control.}
 \hspace{0pt}
-\vspace{-12pt}
+\vspace{0pt}
 
 \divider
 

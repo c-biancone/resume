@@ -4,7 +4,7 @@
 % This class file defines the structure and design of the template. 
 %
 %
-% Createdby Chris Biancone
+% Created by Chris Biancone
 % Rev. 04-11-2021
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -18,26 +18,36 @@
 \usepackage{ifthen} % Required for ifthenelse statements
 \usepackage{setspace}
 \usepackage{moresize}
+\usepackage{ragged2e}
 
 % custom fonts
 \usepackage{fontspec}
-\setmainfont{[garamond_var.ttf]} % fallback
-\newfontfamily \bold{[haasbold.ttf]}[StylisticSet=1]
-\newfontfamily \sans{[haas.ttf]}[StylisticSet=1]
-\newfontfamily \serif{[garamond_var.ttf]}
+\newfontfamily \bold{Sohne-Halbfett.otf}
+\newfontfamily \thin{STIXTwoText-Regular.otf}
+\setmainfont{STIXTwoText}[
+	Extension		= .otf,
+	UprightFont		= *-Medium,
+	% BoldFont		= *-Bold.otf,
+	ItalicFont		= *-MediumItalic.otf,
+	% BoldItalicFont 	= *-BoldItalic.otf
+]
+\usepackage[math-style=ISO]{unicode-math}
+\setmathfont{STIXTwoMath-Regular.otf} % for symbols
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 
 \pagestyle{empty} % Suppress page numbers
 
 % custom colors
 \usepackage{xcolor}
-\usepackage[pantone]{xespotcolor}
-\NewSpotColorSpace{PANTONE}
-\AddSpotColor     {PANTONE}  {PANTONE19-3847TCX} {PANTONE\SpotSpace 19-3847\SpotSpace TCX} {0.2 0.24 0.0 0.5} % PANTONE textile deep blue
+% \usepackage[pantone]{xespotcolor}
+% \NewSpotColorSpace{PANTONE}
+% \AddSpotColor     {PANTONE}  {PANTONE19-3847TCX} {PANTONE\SpotSpace 19-3847\SpotSpace TCX} {0.2 0.24 0.0 0.5} % PANTONE textile deep blue
 
 \usepackage{dashrule}
 
 \def \namefont{\bold\Huge\setstretch{1.25}}
-\def \bodyfont{\normalsize\serif\color{darkgray}}
+\def \bodyfont{\normalsize}
 \def \expfont{\bold\Large}
 
 % dotted line divider
@@ -51,10 +61,10 @@
 \color{black}
  \nointerlineskip\bigskip%
  \ifstrequal{#1}{}{}{\marginpar{{\dimexpr1pt-\baselineskip}\raggedright\input{#1}}}%
- {\sans\Huge{#2}}\\[-1ex]%
+ {\bold\LARGE{#2}}\\[-1ex]%
  {\rule{\linewidth}{2pt}\par}\medskip
 }
 
 \newcommand{\expitem}[4][]{
-\parbox[t]{0.2 \textwidth}{{\large{\bold{{#1}} \par\noskip \small\sans{#2} \par\noskip {#3} \par\noskip {#4}}}}
+\parbox[t]{0.2 \textwidth}{{\large{\bold{{#1}} \par\noskip \small{#2} \par\noskip {#3} \par\noskip {#4}}}}
 }
