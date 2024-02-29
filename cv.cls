@@ -24,6 +24,7 @@
 \usepackage{fontspec}
 \newfontfamily \bold{Sohne-Halbfett.otf}
 \newfontfamily \thin{STIXTwoText-Regular.otf}
+\newfontfamily \FontAwesome{FontAwesome6Pro-Solid-900.otf}
 \setmainfont{STIXTwoText}[
 	Extension		= .otf,
 	UprightFont		= *-Medium,

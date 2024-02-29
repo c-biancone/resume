@@ -19,7 +19,7 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{paracol}    % multicolumn layout
 \usepackage{fancyhdr}   % footer
-\usepackage[left=0.5in,top=0.5in,right=0.5in,bottom=0.5in,columnsep=0.5in]{geometry}
+\usepackage[left=0.5in,top=0.5in,right=0.5in,bottom=0.5in,columnsep=0.5in,footskip=-16pt]{geometry}
 
 % define tab spacing
 \usepackage{setspace}
@@ -33,8 +33,17 @@
 \contourlength{0.8pt}
 \newcommand{\myuline}[1]{\uline{\phantom{#1}}\llap{\contour{white}{#1}}}
 
+\usepackage{textcomp}
 \usepackage{siunitx}
-\sisetup{detect-all=true}   % ensure proper font weight
+\sisetup{
+    %detect-all=true,
+    mode=match,
+    unit-mode=text,
+    %unit-font-command = \mathnormal,
+    reset-text-family=false,
+    reset-text-series=false,
+    reset-text-shape=false
+}   % ensure proper font weight
 \sisetup{per-mode = repeated-symbol}    % ensure "/" unit delineator
 \sisetup{range-phrase = --,range-units = brackets} % hyphenated ranges, SI syntax
 \DeclareMathSymbol{\varOmega}{\mathalpha}{operators}{"0A}   % upright omega for ohms
@@ -48,7 +57,7 @@
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{2pt}
-\fancyfoot[C]{github.com/c-biancone/resume}
+\fancyfoot[C]{\tiny\thin github.com/c-biancone/resume}
 
 % \SetPageColorSpace{PANTONE}
 % \definecolor{deepblue}{spotcolor}{PANTONE19-3847TCX, 1.0}
@@ -83,17 +92,20 @@
 \RaggedRight
 Fifth-year EE student at RIT proficient in analog and mixed signal electronics design and instruction. Experienced CAD tools such as C\=adence, Altium, and MATLAB for microelectronics, control system, and SDR system design. Currently conducting research into biophysical effects of DC magnetic fields and semiconducting properties of neurons for publication in a graduate paper.
 
-I am an Isshin-Ryu black belt and enjoy hiking and mountain biking. I have recently combined a love of music with my knowledge in analog electronics design to design a low-tolerance differential RIAA preamplifier.
+I am an Isshin-Ryu black belt and enjoy hiking and mountain biking. I have recently combined a love of music with my knowledge in analog electronics design to design a high-tolerance differential RIAA preamplifier.
 
 %-------------------------------------------------------------------
 %	EDUCATION
 %-------------------------------------------------------------------
 \cvsection{Education}
-{\large\bold{Rochester Institute of \\ Technology}}
-
-{GPA: 3.7} \hfill 2019 -- Present \\
+\vspace{-4pt}
+{\large\bold{Rochester Institute of \\ Technology}} \par\smallskip
+\vspace{-8pt}
+{GPA: 3.7} \hfill 2019 -- Present \par\vspace{-4pt}
 BS/MS Electrical Engineering with \\
 MS focus in MEMS\\
+
+\vspace{12pt}
 
 % {\Large\bold{Pope John XXIII HS}}
 
@@ -106,13 +118,16 @@ MS focus in MEMS\\
 %-------------------------------------------------------------------
 \cvsection{Skills}
 \begin{description}
-    \item[\faLaptop] \hspace{0.25em} C\=adence Virtuoso, Altium, COMSOL, SPICE, Solidworks
+    \item[\faLaptop] \hspace{0.25em} C\=adence Virtuoso, Altium, COMSOL, SPICE, Simulink
 \end{description}
 \begin{description}
     \item[\faCode] \hspace{0.25em} C++, Python, MATLAB, \LaTeX{}
 \end{description}
 \begin{description}
-    \item[\faWrench] \hspace{0.25em} Analog / Mixed Signal Design, MEMS Fabrication \par
+    \item[\faWrench] \hspace{0.25em} Analog / Mixed Signal \\Design, MEMS Fabrication, GTAW \& GMAW Welding \par
+\end{description}
+\begin{description}
+    \item[\faHandshake] \hspace{0.25em} Agile Development Methodology, Technical Instruction
 \end{description}
 
 \switchcolumn   % goto right side
@@ -130,7 +145,7 @@ MS focus in MEMS\\
 \normalsize\rm Managed the re-engineering of an unmanned ground vehicle electrical system to include failure modes. Investigated the adaptation of existing hardware to an open Ethernet standard. Supported the development of next-generation fire control for medium caliber systems.
 
 \hspace{0pt}
-\vspace{-24pt}
+\vspace{-20pt}
 
 \divider
 
@@ -139,10 +154,10 @@ MS focus in MEMS\\
 \small\thin{Analog Electronics} \hfill \small\thin{RIT}
 \setstretch{0.9}
 
-\normalsize\rm Instructed and assisted students in RIT's EE480 Analog Electronics lab. Exercises include SPICE and hardware characterization and simulation of diode circuits, and blutistage BJT/MOSFET amplifiers.
+\normalsize\rm Instructed and assisted students in RIT's EE480 Analog Electronics lab. Exercises include SPICE and hardware characterization and simulation of diode circuits and multistage BJT/MOSFET amplifiers.
 
 \hspace{0pt}
-\vspace{-24pt}
+\vspace{-20pt}
 
 \divider
 
@@ -177,23 +192,23 @@ MS focus in MEMS\\
 
 \parbox[t]{0.25 \textwidth}{\large{\bold{RTR Fully-Differential \\Op-Amp}}}
 \hfill
-\parbox[t]{0.5 \linewidth}{\vspace{-11pt} Verilog Harvard architecture CPU implemented in hardware on Altera FPGA. Wrote Python assembler for full development stack control.}
+\parbox[t]{0.6 \linewidth}{\vspace{-11pt} Developed and simulated post-layout a novel auto-biasing architecture for a 3-stage folded cascode differential op-amp, achieving a \qty{13}{\dB} improvement in linearity over other rail-to-rail designs. Pursuing IP protection or publication.}
 \hspace{0pt}
-\vspace{0pt}
+\vspace{-6pt}
 
 \divider
 
-\parbox[t]{0.25 \textwidth}{\Large{\bold{MSP430 \\ Oscilloscope}}}
+\parbox[t]{0.25 \textwidth}{\large{\bold{RTR StrongARM \\Comparator}}}
 \hfill
-\parbox[t]{0.5 \linewidth}{\vspace{-11pt} Created a functional portable oscilloscope using Assembly algorithms. Uses capacitive touchpad for input and LEDs and UART for display.}
+\parbox[t]{0.6 \linewidth}{\vspace{-11pt} Modified the StrongARM dynamic \\ comparator architecture to process signals above and below the voltage supply for \\ application in flash and SAR ADCs. Achieved \qty{890}{\uV} resolution at \qty{1}{\GHz} operation with \qty{260}{\pA} quiescent current draw and \qty{16}{\textmu m} by \qty{10}{\um} layout area.}
 \hspace{0pt}
-\vspace{-12pt}
+\vspace{-6pt}
 
 \divider
 
-\parbox[t]{0.25 \textwidth}{\Large{\bold{Mandelbrot Set \\ Render}}}
+\parbox[t]{0.25 \textwidth}{\large{\bold{8-bit RISC CPU}}}
 \hfill
-\parbox[t]{0.5 \linewidth}{\vspace{-11pt} Efficiently rendered Mandelbrot Fractal in C++ with colorization and vector-mapping. Integrating with custom thread pool.}
+\parbox[t]{0.6 \linewidth}{\vspace{-11pt} Designed a Harvard-architecture CPU with Memory-Mapped I/O and 16 instructions, described in Verilog. Wrote custom assembler in python to verify syntax and translate Assembly into program files.}
 \hspace{0pt}
 \vspace{-12pt}
 

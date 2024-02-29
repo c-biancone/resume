@@ -91,6 +91,7 @@ INPUT c:/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.cfg
 INPUT C:/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc
 INPUT C:/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/sohne-halbfett.luc
 INPUT C:/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/stixtwotext-regular.luc
+INPUT C:/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/fontawesome6pro-solid-900.luc
 INPUT C:/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/stixtwotext-medium.luc
 INPUT C:/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/stixtwotext-mediumitalic.luc
 INPUT c:/texlive/2023/texmf-dist/tex/latex/unicode-math/unicode-math.sty
@@ -163,6 +164,7 @@ INPUT c:/texlive/2023/texmf-dist/tex/latex/contour/contour.cfg
 INPUT c:/texlive/2023/texmf-dist/tex/latex/contour/pdftex.cnt
 INPUT c:/texlive/2023/texmf-dist/tex/generic/ulem/ulem.sty
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/latex-fonts/lasy6.tfm
+INPUT c:/texlive/2023/texmf-dist/tex/latex/base/textcomp.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/siunitx/siunitx.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/translations/translations.sty
 INPUT ./cv.aux

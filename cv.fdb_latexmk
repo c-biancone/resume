@@ -1,7 +1,8 @@
 # Fdb version 4
-["lualatex"] 1709145123.97699 "f:/Personal/Resume/resume/cv.tex" "cv.pdf" "cv" 1709145128.29829 0
+["lualatex"] 1709164817.23217 "f:/Personal/Resume/resume/cv.tex" "cv.pdf" "cv" 1709164821.6318 0
   "C:/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/fontawesome5brands-regular-400.luc" 1709061859 180107 99bb97d20ae650ae51d3b41c58b424e3 ""
   "C:/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/fontawesome5free-solid-900.luc" 1709061859 380932 b8fa95396b641bc69e50f9e9ed0dde40 ""
+  "C:/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/fontawesome6pro-solid-900.luc" 1709162695 923683 e4b824a6452f2d2809e092c5011ec530 ""
   "C:/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc" 1708803002 128402 0817ff9a64a9bea980e02cadb2bdd7db ""
   "C:/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc" 1708750347 127319 1536175fd933251a77f77bd8a738c2e2 ""
   "C:/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/sohne-halbfett.luc" 1709062461 161951 57fda31c210f5d7538fc9669fcc3b3e4 ""
@@ -55,6 +56,7 @@
   "c:/texlive/2023/texmf-dist/tex/latex/base/ifthen.sty" 1708570550 5319 2b738d02ce36ada6dcdd9534940db0ee ""
   "c:/texlive/2023/texmf-dist/tex/latex/base/ltluatex.lua" 1708570550 24543 44e225ecc61706b060f0189a96e1cc1d ""
   "c:/texlive/2023/texmf-dist/tex/latex/base/size11.clo" 1708570550 8464 59874a3b0776c73e2a138b025d8473dd ""
+  "c:/texlive/2023/texmf-dist/tex/latex/base/textcomp.sty" 1708570550 2894 fc64867f9d198785eabe71a88276a9cb ""
   "c:/texlive/2023/texmf-dist/tex/latex/base/ts1enc.def" 1708570550 8090 f16408278fc28f119d5a6757c212f57e ""
   "c:/texlive/2023/texmf-dist/tex/latex/contour/contour.cfg" 1708566805 1094 81b59058e250cbe26694be3c10a3fbc1 ""
   "c:/texlive/2023/texmf-dist/tex/latex/contour/contour.sty" 1708566805 4239 0dd461542a0e7e6c86cfb517846535ee ""
@@ -163,11 +165,11 @@
   "c:/texlive/2023/texmf-dist/tex/luatex/luatexbase/luatexbase.sty" 1708571444 10170 b1a2248f43cab899e3fe36f676176865 ""
   "c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1708577934 5518052 de2a91c664d75f3971de4662dc6b5a65 ""
   "c:/texlive/2023/texmf-var/web2c/luahbtex/lualatex.fmt" 1708748322 12250004 20ee0e0ac0323255bc655a3a3aa3c6f9 ""
-  "cv.aux" 1709145127 162 55205a9e8a8eca30d36afb389b0617bf "lualatex"
-  "cv.cls" 1709072278 2195 4606cc390ebccc4955e4bd7073a64976 ""
-  "cv.out" 1709145127 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
-  "cv.tex" 1709145122 7891 a7f2b2637e94517532ac440f1dd181d5 ""
-  "f:/Personal/Resume/resume/cv.tex" 1709145122 7891 a7f2b2637e94517532ac440f1dd181d5 ""
+  "cv.aux" 1709164821 162 55205a9e8a8eca30d36afb389b0617bf "lualatex"
+  "cv.cls" 1709162731 2255 fc864c14b6b43e9100ea0ea3b8c084e7 ""
+  "cv.out" 1709164820 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
+  "cv.tex" 1709164816 8701 078cc8ad47c1d9ef15bd9008996cc5b0 ""
+  "f:/Personal/Resume/resume/cv.tex" 1709164816 8701 078cc8ad47c1d9ef15bd9008996cc5b0 ""
   (generated)
   "C:/texlive/2023/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.lua"
   "C:/texlive/2023/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc"
